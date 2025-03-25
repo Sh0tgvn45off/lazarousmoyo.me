@@ -62,9 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     new TypeWriter(textElement, roles);
 });
 function showVideoPopup() {
+    const videoElement = document.getElementById('drive-video');
+    
+    const videoUrl = 'https://drive.google.com/file/d/1oPNnEOA2uTpLIYdXLrZXpeQohdIGcBQ3/preview';
+    
+    videoElement.src = videoUrl;
     document.getElementById('video-popup').style.display = 'flex';
-}
-
-function closeVideoPopup() {
-    document.getElementById('video-popup').style.display = 'none';
 }
