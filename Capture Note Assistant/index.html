@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capture Note Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="site-branding">
+                <img src="notebook-logo.png" alt="Notebook Logo" class="site-logo">
+                <div class="site-titles">
+                    <div class="site-author">Lazarous Moyo's</div>
+                    <div class="site-app-name">Capture Note Assistant</div>
+                </div>
+            </div>
+            <nav class="site-navigation">
+                <ul>
+                    <li><a href="https://sh0tgvn45off.github.io/lazarousmoyo.me/">My Portfolio</a></li>
+                    <li><a href="https://www.linkedin.com/in/lazarous-moyo/">Contact Me</a></li>
+                    <li><a href="https://sh0tgvn45off.github.io/lazarousmoyo.me/#Projects">About Project</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="session-mode-selection">
+            <div class="mode-button meeting-mode" data-mode="meeting">Meeting Session</div>
+            <div class="mode-button lecture-mode" data-mode="lecture">Lecture Session</div>
+        </div>
+
+        <div class="controls-and-document">
+            <div class="mic-control">
+                <div id="startSession" class="start-button">
+                    <img src="mic-logo.png" alt="Start Recording">
+                </div>
+                <div id="timerDisplay" class="timer-display">
+                    <img src="timer-icon.gif" alt="Timer Icon" class="timer-icon">
+                    <div id="countdown" class="countdown-text">1:30:00</div>
+                </div>
+            </div>
+
+            <div id="documentArea" class="document-area">
+                <div id="textDisplayArea" class="text-area" contenteditable="true">
+                    </div>
+            </div>
+        </div>
+
+        <div class="controls bottom-controls">
+            <button id="endSession" class="mode-button action-button smaller-button" disabled>END SESSION</button>
+            <button id="formatButton" class="mode-button action-button smaller-button" disabled>FORMAT</button>
+            <div class="download-options smaller-download-options">
+                <label for="downloadFormat">Download As:</label>
+                <select id="downloadFormat" class="smaller-button">
+                    <option value="pdf">PDF</option>
+                    <option value="docx">DOCX</option>
+                </select>
+                <button id="downloadButton" class="mode-button action-button smaller-button" disabled>Download</button>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

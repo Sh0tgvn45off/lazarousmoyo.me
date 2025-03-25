@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazarous Moyo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo"> Lazarous Moyo</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#About">About</a></li>
+                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Lazarous Moyo</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#About" onclick="toggleMenu()">About</a></li>
+                <li><a href="#Experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#Contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+
+    </nav>
+    <!-- Video Background Container -->
+    <div class="video-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="./background_video/background.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Optional Overlay -->
+        <div class="video-overlay"></div>
+    </div>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/Professional .jpg" alt="Lazarous Moyo picture" />
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">
+                Hello, I'm
+            </p>
+            <h1 class="title">Lazarous Moyo</h1>
+            <div class="typing-container">
+                <div class="typing-text">
+                    <p></p><span id="role-text"></span>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="btn btn-color-2"
+                    onclick="window.open('./assets/Resume_Lazarous_Moyo_for_Lazarous_Moyo (MASTER).pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='/#Contact'">
+                    Contact Info
+                </button>
+            </div>
+            <div id="social-container">
+                <img src="./assets/linkedin.png" alt="My linkedin profile" class="icon"
+                    onclick="location.href='https://www.linkedin.com/in/lazarous-moyo/'" />
+                <img src="./assets/github.png" alt="My githuh account" class="icon"
+                    onclick="location.href='https://github.com/Sh0tgvn45off'" />
+            </div>
+        </div>
+    </section>
+
+    <section id="About" >
+        <p class="section__text__p1"> Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assets/about-me-laz.jpg"
+                    alt="Profile picture"
+                    class="about-pic">
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                        <div class="details-container">
+                            <img src="./assets/experience.png" alt="experience icon"
+                            class="icon">
+                            <h3> Experience</h3>
+                            <p> 1+ Years: Backend Developer </p>
+                            <p> 2+ Years: Research Analyst</p>
+                            <p> 1+ Years: Pentester</p>
+                        </div> 
+                        <div class="details-container">
+                            <img src="./assets/education.png" alt="education icon"
+                            class="icon">
+                            <h3> Education</h3>
+                            <p> B.Sc. Hon. Bachelors Degree : Computer Science </p>
+                            <p> Ashoka University, Rai, India</p>
+                        </div>
+                </div>
+                <div class="text-container">
+                    <br>
+                    <p  style="text-align: justify;">I am a Computer Science and Media Science honors student at Ashoka University, specializing in backend development, cybersecurity, and data analysis. 
+                        After pivoting from a planned law career, I found my passion in technology and problem-solving. 
+                        Currently serving as a Resident Assistant while pursuing my studies, I have gained valuable experience through roles at, <b>Softek, Mobalytics, Dion Cyber Training, YouthClimate Connect, HP Tech Ventures, and National Geographic Society.</b>
+                         My work combines technical expertise with environmental consciousness, particularly focusing on systems security analysis and environmental impact research.
+                    </p>
+                </div>
+            </div>
+        </div>
+<img src="./assets/arrow.png"
+     alt="Arrow Icon" 
+     class="icon"
+     onclick="location.href='./#Experience'">
+    </section>
+<script src="script.js"></script>
+<!-- HTML -->
+<section id="Experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+        <div class="details-containers">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+                <article>
+                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                    <div class="article-content">
+                        <h2>Flutter</h2>
+                        <p>Intermediate</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                    <div class="article-content">
+                        <h2>Python</h2>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                    <div class="article-content">
+                        <h2>C, C++</h2>
+                        <p>Intermediate</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                    <div class="article-content">
+                        <h2>Android Studio</h2>
+                        <p>Beginner</p>
+                    </div>
+                </article>
+        
+            </div>
+        </div>
+        <div class="details-containers">
+            <h2 class="experience-sub-title">Data Analytics & Security</h2>
+            <div class="article-container">
+                <article>
+                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                    <div class="article-content">
+                        <h2>Power Bi</h2>
+                        <p>Basic</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                    <div class="article-content">
+                        <h2>Amazon AWS</h2>
+                        <p>Intermediate</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                    <div class="article-content">
+                        <h2>Linux System Admin</h2>
+                        <p>Intermediate</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                    <div class="article-content">
+                        <h2>Network+Web App Penetration Testing</h2>
+                        <p>Intermediate</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+#Experience {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.details-containers {
+    flex: 1;
+    max-width: 500px;
+}
+
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.article-content {
+    text-align: left;
+}
+
+.article-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.article-content p {
+    color: rgb(85, 85, 85);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details-containers {
+        width: 100%;
+    }
+}
+</style>
+
+<section id="Projects">
+<p class="section__text__p1"> Browse My Recent</p>
+<h1 class="title"> Projects</h1>
+<div class="experience-details-container">
+    <div class="details-container color container">
+        
+        <div class="article-container">
+          
+            <img src="./Capture Note Assistant/1.capturenoteassistant.png" 
+                 alt="Project 1"
+                 class="project-imgx">
+                 
+        </div>
+        <div class="article-container">
+            <img   
+            src="./Capture Note Assistant/2.capturenoteassistant.png"
+            alt="Project 1"
+            class="project-imgx"
+            />
+        </div>
+        <h2 class="experience-sub-title-project-title">Capture Note Assistant</h2>
+        <div class="btn-container">
+            <button 
+            class="btn btn-color-2 project-btn" 
+            onclick="location.href='https://github.com/Sh0tgvn45off/Hand-Gesture-Mouse-Control-System-py'"
+            >
+                Github
+            </button>
+            <button
+            class="btn btn-color-2 project-btn" 
+            onclick="location.href='./Capture Note Assistant/index.html'"
+        >
+           Working Prototype
+        </button>
+        </div>
+    </div>
+    <br>
+    <div class="details-container color container">
+        
+        <div class="article-container">
+          
+            <img src="./HGMC data/1.Preview-HGMC-portfolio .png" 
+                 alt="Project 1"
+                 class="project-imgx">
+                 
+        </div>
+        <div class="article-container">
+            <img   
+            src="./HGMC data/3.Preview-HGMC-portfolio .gif"
+            alt="Project 1"
+            class="project-imgx"
+            />
+        </div>
+        <h2 class="experience-sub-title-project-title">Hand Gesture Mouse Control</h2>
+        <div class="btn-container">
+            <button 
+            class="btn btn-color-2 project-btn" 
+            onclick="location.href='https://github.com/Sh0tgvn45off/Hand-Gesture-Mouse-Control-System-py'"
+            >
+                Github
+            </button>
+            <button
+            class="btn btn-color-2 project-btn" 
+            onclick="showVideoPopup()"
+        >
+            Live Demo
+        </button>
+        </div>
+</div>
+<br>
+<div class="details-container color container">
+        
+    <div class="article-container">
+      
+        <img src="./NatGeo_screenshots/natgeo_1.png" 
+             alt="Project 1"
+             class="project-imgx">
+             
+    </div>
+    <div class="article-container">
+        <img   
+        src="./NatGeo_screenshots/natgeo_2.png"
+        alt="Project 1"
+        class="project-imgx"
+        />
+    </div>
+    <h2 class="experience-sub-title-project-title">Natgeo ArcGIS Article</h2>
+    <div class="btn-container">
+        <button 
+        class="btn btn-color-2 project-btn" 
+        onclick="location.href='https://www.linkedin.com/posts/lazarous-moyo_natgeo-impact-extern-activity-7226083246697013248-WTvB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADIfcSsBcd6ZoF92mFUDy2mS-WdXsG4g2tI'"
+        >
+            Review
+        </button>
+        <button
+        class="btn btn-color-2 project-btn" 
+        onclick="location.href='https://storymaps.arcgis.com/stories/bb5a88f8afe34440b307cce34a972c38'"
+        
+        >
+        Read Article
+        </button>
+    </div>
+</div>
+</section>
+</section>
+<section id="contact">
+  <p class="section__text__p1">Get in Touch</p>
+  <h1 class="title">Contact Me</h1>
+  <div class="contact-info-upper-container">
+    <div class="contact-info-container">
+
+      <img
+        src="./assets/email.png"
+        alt="icon"
+        class="icon contact-icon email-icon"
+      />
+      <p><a href="mailto:moyolazarous45@gmail.com">Email</a></p>
+    </div>
+    <div class="contact-info-container">
+      <img
+        src="./assets/linkedin.png"
+        alt="icon"
+        class="icon contact-icon"
+      />
+      <p><a href="https://www.linkedin.com/in/lazarous-moyo/">LinkedIn</a></p>
+    </div>
+  </div>
+</section>
+<footer>
+  <nav>
+    <div class="nav-links-container"
+            id="Contact">
+      <ul class="nav-links">
+        <li><a href="#About">About</a></li>
+        <li><a href="#Experience">Experience</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <p>Copyright &#169; 2025 Lazarous Moyo. All Rights Reserved.</p>
+</footer>
+<!-- Pop up video-->
+<div id="video-popup" class="popup">
+    <div class="popup-content">
+        <video src="https://drive.google.com/file/d/1oPNnEOA2uTpLIYdXLrZXpeQohdIGcBQ3/view?usp=sharing" controls></video>
+        <button class="close-button" onclick="closeVideoPopup()">Close</button>
+    </div>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
