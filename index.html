@@ -415,7 +415,14 @@ article {
 <!-- Pop up video-->
 <div id="video-popup" class="popup">
     <div class="popup-content">
-        <video src="https://drive.google.com/file/d/1oPNnEOA2uTpLIYdXLrZXpeQohdIGcBQ3/view?usp=sharing" controls></video>
+        <iframe 
+            id="drive-video"
+            src="https://drive.google.com/file/d/1oPNnEOA2uTpLIYdXLrZXpeQohdIGcBQ3/preview" 
+            width="1366"
+            height="744" 
+            allow="autoplay" 
+            allowfullscreen
+        ></iframe>
         <button class="close-button" onclick="closeVideoPopup()">Close</button>
     </div>
 </div>
