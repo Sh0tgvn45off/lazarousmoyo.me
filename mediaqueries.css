@@ -1,3 +1,4 @@
+/* mediaqueries.css */
 @media screen and (max-width: 1200px) {
     #desktop-nav {
         display: none;
@@ -5,13 +6,17 @@
     #hamburger-nav {
         display: flex;
     }
+    section {
+        margin: 0 5rem; /* Reduced section margin */
+    }
 }
 
 @media screen and (max-width: 768px) {
     /* Adjust section padding and margin for smaller screens */
     section {
         padding-top: 2vh;
-        margin: 0 2rem;
+        margin: 0 2rem; /* Further reduced section margin */
+        height: auto; /* Section height adjusts to content */
     }
 
     /* Adjust profile section layout */
@@ -24,72 +29,99 @@
 
     .section__pic-container {
         width: 100%;
+        max-width: 300px; /* Limit image width on smaller screens if needed */
         height: auto;
     }
 
     .section__text {
         text-align: center;
     }
-
-    /* Adjust footer layout */
-    footer {
-        height: auto;
-        margin: 1rem;
+    .section__text__p2{
+        font-size: 1.5rem; /* Reduced title size on smaller screens */
     }
 
-    footer p {
-        text-align: center;
+    /* Adjust about me section */
+    #About .section-container {
+        flex-direction: column; /* Stack about me content vertically */
+        align-items: center; /* Center align items */
     }
+     #About .section__pic-container {
+        max-width: 300px; /* Limit about me image width on smaller screens if needed */
+    }
+    #About .about-containers{
+        flex-direction: column; /* Stack details containers vertically */
+        align-items: center; /* Center align details containers */
+    }
+
+    /* Adjust experience section */
+    #Experience .experience-details-container{
+        flex-direction: column; /* Stack experience details vertically */
+        align-items: center; /* Center align experience details */
+    }
+
+    /* Adjust projects section (if necessary, based on existing styles, should be vertical already from style.css) */
 
     /* Adjust contact section layout */
     #contact {
-        height: auto;
+        height: auto; /* Adjust contact section height to content */
         padding: 1rem;
     }
 
     .contact-info-upper-container {
-        flex-direction: column;
+        flex-direction: column; /* Stack contact info vertically */
         padding: 1rem;
     }
 
     .contact-info-container {
-        flex-direction: column;
+        flex-direction: column; /* Stack contact links vertically */
         gap: 1rem;
+    }
+
+     /* Adjust footer layout */
+    footer {
+        height: auto; /* Adjust footer height to content */
+        margin: 1rem;
+    }
+
+
+    /* Responsive video popup adjustments for smaller screens */
+    .popup-content {
+        padding: 10px; /* Reduce padding in popup content */
     }
 }
 
 @media screen and (max-width: 480px) {
     /* Further adjustments for very small screens */
     section {
-        margin: 0 1rem;
+        margin: 0 1rem; /* Minimum section margin for very small screens */
     }
-
+     .section__text__p2{
+        font-size: 1.2rem; /* Further reduced title size on very small screens */
+    }
     .section__pic-container {
-        width: 100%;
-        height: auto;
+        max-width: 90%; /* Allow images to take more width on very small screens */
+    }
+     #About .section__pic-container {
+        max-width: 90%; /* Allow about me image to take more width on very small screens */
     }
 
-    .section__text {
-        text-align: center;
+    /* Adjustments for nav links or buttons if text wrapping is an issue */
+    .nav-links, .btn-container {
+        flex-direction: column; /* Stack nav links and buttons vertically if needed */
+        align-items: center; /* Center align stacked items */
+        gap: 0.5rem; /* Reduce gap between stacked items */
+    }
+     .nav-links li{
+        text-align: center; /* Center align nav links text */
+    }
+    .btn {
+        width: 90%; /* Full width buttons on very small screens */
+        max-width: 200px; /* But limit max width */
     }
 
-    footer {
-        margin: 0.5rem;
-    }
 
-    footer p {
-        text-align: center;
-    }
-
-    #contact {
-        padding: 0.5rem;
-    }
-
-    .contact-info-upper-container {
-        padding: 0.5rem;
-    }
-
-    .contact-info-container {
-        gap: 0.5rem;
+    /* Further reduce padding and font sizes for very small screens if necessary */
+     .popup-content {
+        padding: 5px; /* Minimum padding in popup content for very small screens */
     }
 }
