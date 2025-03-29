@@ -1,4 +1,4 @@
-/* GENERAL */
+/* style.css */
 @import url("https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600&display=swap");
 
 *
@@ -103,6 +103,7 @@ p
    max-height: 0;
    overflow: hidden;
    transition: all 0.3 ease-in-out;
+   z-index: 2; /* Ensure menu is above hero section */
 }
 .menu-links a
 {
@@ -156,7 +157,6 @@ section {
    margin: 0 10rem;
    box-sizing: border-box;
    min-height: fit-content;
-
 }
 .section__container
 { display: flex;
@@ -273,7 +273,7 @@ text-align: center;
 
 .section-container {
    display: flex;
-   align-items: flex-start;
+   align-items: flex-start; /* Align items to the start to prevent image movement */
    gap: 2rem;
    max-width: 1200px;
    margin: 0 auto;
@@ -288,6 +288,7 @@ text-align: center;
    width: 100%;
    height: auto;
    border-radius: 2rem;
+   display: block; /* Prevent extra space below image */
 }
 
 .about-details-container {
@@ -315,22 +316,6 @@ text-align: center;
    width: 2rem;
    height: 2rem;
    margin-bottom: 1rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-   .section-container {
-       flex-direction: column;
-       align-items: center;
-   }
-
-   .section__pic-container {
-       max-width: 100%;
-   }
-
-   .about-containers {
-       flex-direction: column;
-   }
 }
  /* Existing styles */
  .typing-text {
@@ -371,8 +356,8 @@ text-align: center;
 }
 
 .section__pic-container {
-   position: sticky;
-   top: 0;
+   position: static; /* Changed from sticky to static to fix image movement */
+   top: auto; /* Reset top if it was previously set */
 }
 
 .section__pic-container img {
@@ -424,11 +409,74 @@ text-align: center;
 
 .project-imgx {
    max-width: 100%; /* Ensure image doesn't exceed container width */
-   max-height: 90vh; /* Limit height to 50% of viewport height */
+   max-height: 90vh; /* Limit height to 90% of viewport height */
    object-fit: contain; /* Maintain aspect ratio */
    width: auto; /* Allow width to adjust proportionally */
    height: auto; /* Allow height to adjust proportionally */
+    display: block; /* Prevent extra space below image */
 }
+
+/* EXPERIENCE SECTION - REVERTED TO ORIGINAL STYLE */
+#Experience {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.details-containers {
+    flex: 1;
+    max-width: 500px;
+}
+
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.article-content {
+    text-align: left;
+}
+
+.article-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.article-content p {
+    color: rgb(85, 85, 85);
+}
+
 
 /* PROJECTS SECTION - UPDATED FOR VERTICAL LAYOUT */
 #Projects {
@@ -458,14 +506,6 @@ text-align: center;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-#Projects .project-imgx {
-    max-width: 100%;
-    max-height: 90vh;
-    object-fit: contain;
-    width: auto;
-    height: auto;
-    margin-bottom: 1rem; /* Add margin below images */
-}
 
 #Projects .experience-sub-title-project-title {
     font-size: 1.5rem;
@@ -495,20 +535,6 @@ text-align: center;
     color: rgb(255, 255, 255);
     cursor: pointer;
 }
-
-/* Responsive Design for Projects Section */
-@media (max-width: 768px) {
-    #Projects .experience-details-container {
-        flex-direction: column; /* Ensure vertical layout on smaller screens too */
-        align-items: center; /* Center align in smaller screens */
-    }
-
-    #Projects .details-container {
-        width: 100%; /* Full width in smaller screens */
-        max-width: 100%; /* Ensure it can take full width if parent allows */
-    }
-}
-
 
 /* CONTACT */
 
@@ -577,8 +603,31 @@ text-align: center;
    padding: 20px;
    border-radius: 10px;
    text-align: center;
+    max-width: 80%; /* Responsive width */
+    max-height: 80%; /* Responsive height */
+    overflow: auto; /* Enable scroll if content is too large */
+}
+/* Responsive iframe for video popup */
+.popup-content iframe {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
 }
 
 .close-button {
    margin-top: 10px;
+}
+
+
+/* Responsive Design for Experience Section - Reverted to Original */
+@media (max-width: 768px) {
+    .experience-details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details-containers {
+        width: 100%;
+    }
 }
