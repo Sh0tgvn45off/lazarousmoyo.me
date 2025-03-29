@@ -1,3 +1,4 @@
+/* script.js */
 function toggleMenu()
 {
     const menu = document.querySelector(".menu-links");
@@ -18,9 +19,9 @@ const roles = [
     "I am a Writer"
 ];
 
-const TYPING_SPEED = 100;  // milliseconds per character
-const DELETING_SPEED = 50; // milliseconds per character
-const PAUSE_TIME = 2000;   // time to wait between typing and deleting
+const TYPING_SPEED = 100;
+const DELETING_SPEED = 50;
+const PAUSE_TIME = 2000;
 
 class TypeWriter {
     constructor(textElement, words) {
@@ -34,7 +35,7 @@ class TypeWriter {
 
     type() {
         const currentWord = this.words[this.wordIndex];
-        
+
         if(this.isDeleting) {
             this.txt = currentWord.substring(0, this.txt.length - 1);
         } else {
@@ -63,9 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function showVideoPopup() {
     const videoElement = document.getElementById('drive-video');
-    
     const videoUrl = 'https://drive.google.com/file/d/1oPNnEOA2uTpLIYdXLrZXpeQohdIGcBQ3/preview';
-    
     videoElement.src = videoUrl;
-    document.getElementById('video-popup').style.display = 'flex';
+    document.getElementById('video-popup').style.display = 'flex'; // Show popup
+}
+
+function closeVideoPopup() {
+    document.getElementById('video-popup').style.display = 'none'; // Hide popup
+    const videoElement = document.getElementById('drive-video');
+    videoElement.src = ''; // Stop video loading when closed
 }
