@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sickle Cell Inheritance Simulator - Lazarous Moyo</title>
+    <link rel="icon" href="AA-logo.png" sizes="36x36" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sickle-cell-simulation.css">
+</head>
+<body>
+
+    <nav id="project-nav" class="site-header">
+        <div class="project-nav-container header-container">
+            <div class="project-site-info site-branding">
+                <a href="index.html"> <img src="AA-logo.png" alt="Site Logo" class="project-logo site-logo" style="height: 100px;"></a>
+                <div class="project-info-text site-titles">
+                    <div class="project-info-title site-author">Lazarous Moyo's</div>
+                    <div class="project-info-subtitle site-app-name" style="font-size: 1.4em; font-weight: bold;">Sickle Cell Inheritance Simulator</div>
+                </div>
+            </div>
+            <div class="project-nav-links site-navigation">
+                <ul class="nav-links">
+                    <li><a href="https://www.lazarousmoyo.me">My Portfolio</a></li>
+                    <li><a href="https://www.linkedin.com/in/lazarous-moyo/">Contact Me</a></li>
+                    <li><a href="https://www.lazarousmoyo.me/#Projects">About Project</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="SickleCellSimulation-content">
+        <div class="section-container container">
+            <h1 class="title" style="text-align: center;"> Sickle Cell Inheritance Simulator</h1>
+
+            <div class="experience-details-container">
+                <div class="details-container color-2 container">
+                    <div class="article-container project-simulation-area">
+
+                        <div class="simulation-input-area">
+                            <h3>Simulation Input</h3>
+                            <div class="families-container">
+                                <h4>Grandparents</h4> <div class="grandparents-all"> <!-- NEW CONTAINER FOR ALL GRANDPARENTS HORIZONTAL -->
+                                    <div class="family" id="family-a">
+
+                                        <div class="grandparents">
+                                            <div class="grandparent" id="grandparent-a1-container">
+                                                <div class="icon-placeholder" id="grandparent-a1-icon"></div>
+                                                <select class="allele-selector mode-button" id="grandparent-a1-allele"></select>
+                                            </div>
+                                            <div class="grandparent" id="grandparent-a2-container">
+                                                <div class="icon-placeholder" id="grandparent-a2-icon"></div>
+                                                <select class="allele-selector mode-button" id="grandparent-a2-allele"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <span class="family-separator"></span> <!-- VERTICAL SEPARATOR -->
+
+                                    <div class="family" id="family-b">
+                                        <div class="grandparents">
+                                            <div class="grandparent" id="grandparent-b1-container">
+                                                <div class="icon-placeholder" id="grandparent-b1-icon"></div>
+                                                <select class="allele-selector mode-button" id="grandparent-b1-allele"></select>
+                                            </div>
+                                            <div class="grandparent" id="grandparent-b2-container">
+                                                <div class="icon-placeholder" id="grandparent-b2-icon"></div>
+                                                <select class="allele-selector mode-button" id="grandparent-b2-allele"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="children-select-area">
+                                <label for="num-children">Number of Children (1-4):</label>
+                                <select id="num-children" class="mode-button"></select>
+                            </div>
+                            <div class="button-container">
+                                <button class="btn btn-color-2 project-btn mode-button simulate">SIMULATE</button>
+                            </div>
+                        </div>
+
+                        <div class="simulation-live-area">
+                            <h3>Simulation Result</h3>
+                            <div class="parents-generation">
+                                <h4>Parents Generation</h4>
+                                <div class="parents">
+                                    <div class="parent" id="parent-a-container">
+                                        <div class="icon-placeholder" id="parent-a-icon"></div>
+                                        <div class="allele-display" id="parent-a-allele-display"></div>
+                                    </div>
+                                    <div class="parent" id="parent-b-container">
+                                        <div class="icon-placeholder" id="parent-b-icon"></div>
+                                        <div class="allele-display" id="parent-b-allele-display"></div>
+                                    </div>
+                                </div>
+                                <img src="arrow-icon.gif" alt="Animated Arrow" class="animated-arrow" id="arrow-grandparents-to-parents">
+                            </div>
+
+                            <div class="children-generation">
+                                <h4>Children Generation</h4>
+                                <div class="children" id="children-container">
+                                    <!-- Children will be dynamically added here -->
+                                </div>
+                                <img src="arrow-icon.gif" alt="Animated Arrow" class="animated-arrow" id="arrow-parents-to-children">
+                            </div>
+
+                            <div id="simulation-results">
+                                <!-- Simulation Results (children alleles/phenotypes) will be displayed here -->
+                            </div>
+                        </div>
+                        <div class="button-container">
+                             <button class="btn btn-color-2 project-btn mode-button restart">RESTART</button>
+                        </div>
+
+
+                    </div>
+
+                    <h2 style="text-align: center;">Sickle Cell Inheritance Simulation</h2>
+                    <div class="btn-container">
+                        <!-- Project Github button remains, placeholder function already in place -->
+                        <!-- button
+                            class="btn btn-color-2 project-btn mode-button"
+                            onclick="location.href='https://github.com/Sh0tgvn45off/website-portfolio-updated/tree/main/Sickle-Cell-Simulation'"
+                        >
+                            Project Files (Github - Placeholder Link)
+                        </button -->  <!-- REmove project github button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center;">
+
+  <p>Copyright © 2025 Lazarous Moyo. All Rights Reserved.</p>
+      </footer>
+
+    <script src="sickle-cell-simulation.js"></script>
+</body>
+</html>
