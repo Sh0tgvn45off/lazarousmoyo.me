@@ -12,10 +12,11 @@ const roles = [
     "I am a Junior Data Analyst",
     "I am a Cyber Security Junior Penetration Tester",
     "I am a Software Tester",
+    "I am a Social Media Personel",
     "I am a Bug Bounty Hunter",
     "I am a Research Analyst",
     "I am a Composer",
-    "I am a Videographer",
+    "I am a Videographer & Creator",
     "I am a Writer"
 ];
 
@@ -74,3 +75,4 @@ function closeVideoPopup() {
     const videoElement = document.getElementById('drive-video');
     videoElement.src = ''; // Stop video loading when closed
 }
+
