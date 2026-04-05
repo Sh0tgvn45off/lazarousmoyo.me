@@ -5,10 +5,14 @@
     }
     #hamburger-nav {
         display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
     }
     section {
-        margin: 0 5rem; /* Reduced section margin */
+        padding: 4vh 3rem;
     }
+    .skills-grid { grid-template-columns: 1fr; }
+    .cert-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media screen and (max-width: 768px) {
