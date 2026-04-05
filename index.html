@@ -1,394 +1,505 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lazarous Moyo</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_cropped_image.png" type="image/png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_cropped_image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
+
+    <!-- DESKTOP NAV -->
     <nav id="desktop-nav">
-        <div class="logo"> Lazarous Moyo</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#About">About</a></li>
-                <li><a href="#Experience">Experience</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
-        </div>
+        <div class="logo">Lazarous Moyo</div>
+        <ul class="nav-links">
+            <li><a href="#About">About</a></li>
+            <li><a href="#Experience">Skills</a></li>
+            <li><a href="#WorkHistory">Work</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
     </nav>
+
+    <!-- HAMBURGER NAV -->
     <nav id="hamburger-nav">
         <div class="logo">Lazarous Moyo</div>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
             <div class="menu-links">
                 <li><a href="#About" onclick="toggleMenu()">About</a></li>
-                <li><a href="#Experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#Experience" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#WorkHistory" onclick="toggleMenu()">Work</a></li>
                 <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#Contact" onclick="toggleMenu()">Contact</a></li>
             </div>
         </div>
-
     </nav>
-    <!-- Video Background Container -->
+
+    <!-- VIDEO BACKGROUND -->
     <div class="video-container">
         <video autoplay muted loop id="bg-video">
             <source src="./background_video/background.mp4" type="video/mp4">
         </video>
-
-        <!-- Optional Overlay -->
         <div class="video-overlay"></div>
     </div>
+
+    <!-- HERO -->
     <section id="profile">
         <div class="section__pic-container">
-            <img src="assets/Professional-2025 .png" alt="Lazarous Moyo picture" />
+            <img src="assets/Professional-2025 .png" alt="Lazarous Moyo" />
         </div>
         <div class="section__text">
-            <p class="section__text__p1">
-                Hello, I'm
-            </p>
+            <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">Lazarous Moyo</h1>
             <div class="typing-container">
                 <div class="typing-text">
-                    <p></p><span id="role-text"></span>
+                    <span id="role-text"></span>
                 </div>
             </div>
             <div class="btn-container">
-                <button class="btn btn-color-2"
-                    onclick="window.open('./assets/Resume_Lazarous_Moyo_for_Lazarous_Moyo (MASTER).pdf')">
-                    Download CV
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='/#Contact'">
-                    Contact Info
-                </button>
+                <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href='#Contact'">Contact Info</button>
             </div>
             <div id="social-container">
-                <img src="./assets/linkedin.png" alt="My linkedin profile" class="icon"
-                    onclick="location.href='https://www.linkedin.com/in/lazarous-moyo/'" />
-                <img src="./assets/github.png" alt="My githuh account" class="icon"
+                <img src="./assets/linkedin.png" alt="LinkedIn" class="icon"
+                    onclick="location.href='https://www.linkedin.com/in/lazarousmoyo/'" />
+                <img src="./assets/github.png" alt="GitHub" class="icon"
                     onclick="location.href='https://github.com/Sh0tgvn45off'" />
             </div>
         </div>
     </section>
 
-    <section id="About" >
-        <p class="section__text__p1"> Get To Know More</p>
+    <!-- ABOUT -->
+    <section id="About">
+        <p class="section__text__p1">Get To Know More</p>
         <h1 class="title">About Me</h1>
         <div class="section-container">
             <div class="section__pic-container">
-                <img src="./assets/about-me-laz.jpg"
-                    alt="Profile picture"
-                    class="about-pic">
+                <img src="./assets/about-me-laz.jpg" alt="Profile picture" class="about-pic">
             </div>
             <div class="about-details-container">
                 <div class="about-containers">
-                        <div class="details-container">
-                            <img src="./assets/experience.png" alt="experience icon"
-                            class="icon">
-                            <h3> Experience</h3>
-                            <p> 2+ Years: Backend Developer </p>
-                            <p> 3+ Years: Research Analyst</p>
-                            <p> 2+ Years: Pentester</p>
-                            <p> 2+ Years: Social Media Management</p>
-                        </div>
-                        <div class="details-container">
-                            <img src="./assets/education.png" alt="education icon"
-                            class="icon">
-                            <h3> Education</h3>
-                            <p> B.Sc. Hon. Bachelors Degree : Computer Science (2025 Graduate) </p>
-                            <p> Ashoka University, Sonipat, Haryana,</p>
-                            <p> Rajiv Ghandi Education City, Rai, India</p>
-                        </div>
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="experience icon" class="icon">
+                        <h3>Experience</h3>
+                        <p>3+ Years: Fullstack Developer</p>
+                        <p>3+ Years: Research &amp; Data Analyst</p>
+                        <p>2+ Years: Junior PenTester</p>
+                        <p>1+ Year: Machine Learning</p>
+                        <p>2+ Years: ICT Consultant</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" alt="education icon" class="icon">
+                        <h3>Education</h3>
+                        <p>B.Sc. (Hons) Computer Science &mdash; 2025</p>
+                        <p>Ashoka University, Sonipat, Haryana, India</p>
+                        <br>
+                        <p>IGCSE &mdash; Science &amp; IT</p>
+                        <p>Chalo Trust School, 2019&ndash;2020</p>
+                    </div>
                 </div>
                 <div class="text-container">
-                    <br>
-                    <p  style="text-align: justify;">I am a Computer Science and Media Science honors graduate student at Ashoka University from the batch of 2021, specializing in backend & Fullstack development, cybersecurity, Research and data analysis.
-                        After pivoting from a planned law career, I found my passion in technology and problem-solving.
-                        I have gained valuable experience through roles at, <b>Rogue Martian Tech Solutions (freelance), Bookworld, Softek, Mobalytics, Dion Cyber Training, Aura_Ashoka, YouthClimate Connect, HP Tech Ventures, and National Geographic Society.</b>
-                         My work combines technical expertise with environmental consciousness, particularly focusing on systems security analysis and environmental impact research. Currently remotely serving as the fullstack web developer of ECOLIGHT Clean Solutions.
+                    <p style="text-align: justify;">
+                        I am a detail-oriented Fullstack Developer and Data Analyst with a strong foundation in building digital solutions that are clean, functional, and user-focused. My experience spans front-end and full-stack development, data modeling, market analysis, business intelligence, and machine learning.
+                        <br><br>
+                        I have worked across diverse environments — analytics for gaming platforms, venture analysis for tech startups, NGO donation platforms, solar energy web applications, and backend ML infrastructure. I approach every problem with curiosity, clarity, and precision.
+                        <br><br>
+                        My background includes <strong>React/Next.js, Python, Node.js, Spring Boot, SQL, Power BI, Tableau, JWT Auth, Cloudflare Workers, and penetration testing</strong>. I thrive in remote and cross-functional teams and deliver high-quality work under tight timelines.
                     </p>
                 </div>
             </div>
         </div>
-<img src="./assets/arrow.png"
-     alt="Arrow Icon"
-     class="icon"
-     onclick="location.href='./#Experience'">
+        <img src="./assets/arrow.png" alt="Arrow" class="icon arrow-down" onclick="location.href='#Experience'">
     </section>
-<script src="script.js"></script>
-<!-- HTML -->
-<section id="Experience">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Experience</h1>
-    <div class="experience-details-container">
-        <div class="details-containers">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-                <article>
-                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-                    <div class="article-content">
-                        <h2>Flutter</h2>
-                        <p>Intermediate</p>
+
+    <!-- SKILLS -->
+    <section id="Experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Technical Skills</h1>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h2 class="experience-sub-title">Frontend Development</h2>
+                <div class="article-container">
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>React.js / Next.js</h2><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>HTML5 / CSS3</h2><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>JavaScript (ES6+)</h2><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>Responsive Design</h2><p>Experienced</p></div></article>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h2 class="experience-sub-title">Backend Development</h2>
+                <div class="article-container">
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>Node.js</h2><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>Spring Boot</h2><p>Intermediate</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>Python</h2><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>C / C++</h2><p>Intermediate</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>Flutter</h2><p>Intermediate</p></div></article>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h2 class="experience-sub-title">Data &amp; ML</h2>
+                <div class="article-container">
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>SQL / Database Design</h2><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>Power BI / Tableau</h2><p>Intermediate</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>Machine Learning</h2><p>Intermediate</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>Market Research &amp; Analytics</h2><p>Experienced</p></div></article>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h2 class="experience-sub-title">Security &amp; DevOps</h2>
+                <div class="article-container">
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>Network / Web PenTesting</h2><p>Intermediate</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>JWT Auth / RBAC / bcrypt</h2><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>Cloudflare Workers &amp; Pages</h2><p>Intermediate</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>Linux System Administration</h2><p>Intermediate</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>Git / GitHub / CI-CD</h2><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon"><div class="article-content"><h2>Amazon AWS</h2><p>Intermediate</p></div></article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK HISTORY TIMELINE -->
+    <section id="WorkHistory">
+        <p class="section__text__p1">My Career</p>
+        <h1 class="title">Work History</h1>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Mar 2026 &ndash; Present</span>
+                    <h3>Backend Infrastructure &amp; ML Intern</h3>
+                    <h4>Koita Centre for Digital Health at Ashoka University (KCDH-A)</h4>
+                    <p>Haryana, India &mdash; Working on backend infrastructure and machine learning systems for digital health initiatives.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Mar 2026 &ndash; Apr 2026</span>
+                    <h3>Web Developer</h3>
+                    <h4>Elite Research Desk | Zambia</h4>
+                    <p>Developed web solutions for the research desk platform.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Aug 2025 &ndash; Mar 2026</span>
+                    <h3>Programs Director &amp; Full Stack Engineer</h3>
+                    <h4>EcoLight Innovation</h4>
+                    <p>Engineered a production-grade Next.js platform serving <strong>1,000+ rural residents</strong> with 85% mobile adoption. Implemented JWT auth, bcrypt, RBAC, and encrypted data transmission. Maintained 99.9% uptime with zero-downtime deployments.</p>
+                    <div class="tech-tags"><span>Next.js</span><span>React.js</span><span>Node.js</span><span>JWT</span><span>bcrypt</span><span>Git CI/CD</span></div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Oct 2025 &ndash; Jan 2026</span>
+                    <h3>Fullstack Web Developer</h3>
+                    <h4>Sycamore Royals International &mdash; Uganda</h4>
+                    <p>Architected an NGO donation platform with Cloudflare Workers, achieving <strong>1,000+ organic visitors</strong> in launch quarter, 38% faster page loads, 32% smaller JS bundles, 95+ Lighthouse score, and 100% elimination of pre-launch vulnerabilities.</p>
+                    <div class="tech-tags"><span>React.js</span><span>Cloudflare Workers</span><span>Node.js</span><span>Spring Boot</span><span>Figma</span><span>PCI-DSS</span></div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Sep 2024 &ndash; Nov 2024</span>
+                    <h3>Business Analyst &mdash; HP Tech Ventures</h3>
+                    <h4>HP (Corporate Venture Capital &amp; Business Analytics)</h4>
+                    <p>Conducted venture analysis and business intelligence reporting for tech startups.</p>
+                    <div class="tech-tags"><span>Business Analytics</span><span>Market Research</span><span>Data Analysis</span></div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Feb 2024 &ndash; Apr 2024</span>
+                    <h3>Gaming Market Research &amp; Data Analyst</h3>
+                    <h4>Mobalytics</h4>
+                    <p>Analyzed gaming data for player performance insights. Developed optimized SQL queries for in-game data retrieval and maintained gaming analytics databases.</p>
+                    <div class="tech-tags"><span>SQL</span><span>Big Data</span><span>Gaming Analytics</span></div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Jun 2024 &ndash; Jul 2024</span>
+                    <h3>Remote Extern</h3>
+                    <h4>National Geographic Society + The Nature Conservancy</h4>
+                    <p>Conducted primary and secondary research on marine conservation. Produced ArcGIS StoryMap article. Applied visual storytelling to communicate marine issues.</p>
+                    <div class="tech-tags"><span>ArcGIS</span><span>Research</span><span>Environmental Science</span></div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Dec 2023 &ndash; Jan 2024</span>
+                    <h3>Software Tester</h3>
+                    <h4>Softek &mdash; Monterrey, Mexico</h4>
+                    <p>Software quality assurance and testing for production applications.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Jan 2021 &ndash; Aug 2021</span>
+                    <h3>Information Technology Intern</h3>
+                    <h4>Kucetekela Foundation &mdash; Lusaka, Zambia</h4>
+                    <p>Provided IT support and contributed to digital systems for the foundation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS BOOK FLIP -->
+    <section id="Projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+
+        <div id="book-scroll-trap">
+            <div id="book-viewport">
+                <div id="book-stage">
+
+                    <!-- Page 1 -->
+                    <div class="book-page active" data-index="0">
+                        <div class="page-inner">
+                            <div class="page-number">01 / 06</div>
+                            <div class="page-category">Fullstack Web App &middot; Social Impact</div>
+                            <h2 class="page-title">EcoLight Solar Platform</h2>
+                            <p class="page-desc">Production-grade Next.js platform serving 1,000+ rural residents with solar lighting solutions. Optimized for low-bandwidth environments, achieving 85% mobile device adoption and equitable digital access for underserved communities.</p>
+                            <div class="page-tech">
+                                <span>Next.js</span><span>React.js</span><span>Node.js</span><span>JWT Auth</span><span>bcrypt</span><span>RBAC</span><span>SSR</span><span>Git CI/CD</span>
+                            </div>
+                            <div class="page-stats">
+                                <div class="stat"><span class="stat-num">1,000+</span><span class="stat-label">Users Served</span></div>
+                                <div class="stat"><span class="stat-num">99.9%</span><span class="stat-label">Uptime</span></div>
+                                <div class="stat"><span class="stat-num">85%</span><span class="stat-label">Mobile Adoption</span></div>
+                            </div>
+                            <div class="page-actions">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Sh0tgvn45off'">GitHub</button>
+                            </div>
+                        </div>
                     </div>
-                </article>
-                <article>
-                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-                    <div class="article-content">
-                        <h2>Python</h2>
-                        <p>Experienced</p>
+
+                    <!-- Page 2 -->
+                    <div class="book-page" data-index="1">
+                        <div class="page-inner">
+                            <div class="page-number">02 / 06</div>
+                            <div class="page-category">Fullstack &middot; Security &middot; Performance</div>
+                            <h2 class="page-title">Sycamore Royals NGO Donation Platform</h2>
+                            <p class="page-desc">Enterprise-grade donation platform with Cloudflare Workers serverless backend. PCI-DSS compliant with 100% elimination of pre-launch security vulnerabilities and industry-leading performance scores.</p>
+                            <div class="page-tech">
+                                <span>React.js</span><span>Cloudflare Workers</span><span>Cloudflare Pages</span><span>Node.js</span><span>Spring Boot</span><span>Figma</span><span>HTML5</span><span>CSS3</span>
+                            </div>
+                            <div class="page-stats">
+                                <div class="stat"><span class="stat-num">1,000+</span><span class="stat-label">Launch Visitors</span></div>
+                                <div class="stat"><span class="stat-num">38%</span><span class="stat-label">Faster Load</span></div>
+                                <div class="stat"><span class="stat-num">95+</span><span class="stat-label">Lighthouse</span></div>
+                            </div>
+                            <div class="page-actions">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Sh0tgvn45off'">GitHub</button>
+                            </div>
+                        </div>
                     </div>
-                </article>
-                <article>
-                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-                    <div class="article-content">
-                        <h2>C, C++</h2>
-                        <p>Intermediate</p>
+
+                    <!-- Page 3 -->
+                    <div class="book-page" data-index="2">
+                        <div class="page-inner">
+                            <div class="page-number">03 / 06</div>
+                            <div class="page-category">Simulation &middot; Biology &middot; Education</div>
+                            <h2 class="page-title">Sickle Cell Inheritance Simulation</h2>
+                            <div class="page-img-row">
+                                <img src="./sickle-cell-inheritance-simulation/sickle-Page11.png" alt="Sickle Cell Sim" class="page-img">
+                                <img src="./sickle-cell-inheritance-simulation/sickle-Page1.png" alt="Sickle Cell Sim 2" class="page-img">
+                            </div>
+                            <p class="page-desc">Interactive genetic inheritance simulator modelling sickle cell disease patterns across family generations. An educational tool for understanding hereditary conditions.</p>
+                            <div class="page-tech">
+                                <span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Genetic Simulation</span>
+                            </div>
+                            <div class="page-actions">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='./sickle-cell-inheritance-simulation/sickle-cell-simulation.html'">Live Demo</button>
+                                <button class="btn btn-color-1 project-btn" onclick="location.href='https://github.com/Sh0tgvn45off'">GitHub</button>
+                            </div>
+                        </div>
                     </div>
-                </article>
-                <article>
-                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-                    <div class="article-content">
-                        <h2>Android Studio</h2>
-                        <p>Intermediate</p>
+
+                    <!-- Page 4 -->
+                    <div class="book-page" data-index="3">
+                        <div class="page-inner">
+                            <div class="page-number">04 / 06</div>
+                            <div class="page-category">Machine Learning &middot; Computer Vision</div>
+                            <h2 class="page-title">Hand Gesture Mouse Control</h2>
+                            <div class="page-img-row">
+                                <img src="./HGMC data/1.Preview-HGMC-portfolio .png" alt="HGMC" class="page-img">
+                                <img src="./HGMC data/3.Preview-HGMC-portfolio .gif" alt="HGMC Demo" class="page-img">
+                            </div>
+                            <p class="page-desc">Real-time system enabling touchless mouse control via hand gestures. Leverages MediaPipe and OpenCV for low-latency recognition — no hardware peripherals required.</p>
+                            <div class="page-tech">
+                                <span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>NumPy</span><span>Computer Vision</span>
+                            </div>
+                            <div class="page-actions">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Sh0tgvn45off/Hand-Gesture-Mouse-Control-System-py'">GitHub</button>
+                                <button class="btn btn-color-1 project-btn" onclick="showVideoPopup()">Live Demo</button>
+                            </div>
+                        </div>
                     </div>
-                </article>
+
+                    <!-- Page 5 -->
+                    <div class="book-page" data-index="4">
+                        <div class="page-inner">
+                            <div class="page-number">05 / 06</div>
+                            <div class="page-category">Web App &middot; Productivity</div>
+                            <h2 class="page-title">Capture Note Assistant</h2>
+                            <div class="page-img-row">
+                                <img src="./Capture Note Assistant/1.capturenoteassistant.png" alt="CNA" class="page-img">
+                                <img src="./Capture Note Assistant/2.capturenoteassistant.png" alt="CNA 2" class="page-img">
+                            </div>
+                            <p class="page-desc">Voice-powered note-taking assistant with real-time speech-to-text, timer integration, and smart capture workflows. Designed for rapid documentation in field and classroom environments.</p>
+                            <div class="page-tech">
+                                <span>JavaScript</span><span>Web Speech API</span><span>HTML5</span><span>CSS3</span>
+                            </div>
+                            <div class="page-actions">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='./Capture Note Assistant/index.html'">Working Prototype</button>
+                                <button class="btn btn-color-1 project-btn" onclick="location.href='https://github.com/Sh0tgvn45off'">GitHub</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page 6 -->
+                    <div class="book-page" data-index="5">
+                        <div class="page-inner">
+                            <div class="page-number">06 / 06</div>
+                            <div class="page-category">GIS &middot; Environmental Research &middot; Storytelling</div>
+                            <h2 class="page-title">NatGeo ArcGIS StoryMap</h2>
+                            <div class="page-img-row">
+                                <img src="./NatGeo_screenshots/natgeo_1.png" alt="NatGeo" class="page-img">
+                                <img src="./NatGeo_screenshots/natgeo_2.png" alt="NatGeo 2" class="page-img">
+                            </div>
+                            <p class="page-desc">Geo-narrative article produced during the National Geographic Society + The Nature Conservancy externship. ArcGIS StoryMaps used to visualize marine conservation data and community impact.</p>
+                            <div class="page-tech">
+                                <span>ArcGIS StoryMaps</span><span>GIS</span><span>Primary Research</span><span>Data Visualization</span><span>Marine Conservation</span>
+                            </div>
+                            <div class="page-actions">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://storymaps.arcgis.com/stories/bb5a88f8afe34440b307cce34a972c38'">Read Article</button>
+                                <button class="btn btn-color-1 project-btn" onclick="location.href='https://www.linkedin.com/posts/lazarous-moyo_natgeo-impact-extern-activity-7226083246697013248-WTvB'">LinkedIn</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /#book-stage -->
+
+                <div id="book-nav">
+                    <button id="book-prev" onclick="flipBook(-1)">&#8592; Prev</button>
+                    <div id="book-progress">
+                        <span id="book-current">1</span> / <span id="book-total">6</span>
+                    </div>
+                    <button id="book-next" onclick="flipBook(1)">Next &#8594;</button>
+                </div>
+
+                <div id="book-dots">
+                    <span class="dot active" onclick="goToPage(0)"></span>
+                    <span class="dot" onclick="goToPage(1)"></span>
+                    <span class="dot" onclick="goToPage(2)"></span>
+                    <span class="dot" onclick="goToPage(3)"></span>
+                    <span class="dot" onclick="goToPage(4)"></span>
+                    <span class="dot" onclick="goToPage(5)"></span>
+                </div>
+
+                <p id="book-scroll-hint">Scroll or use arrows to flip through projects &mdash; page exits after all 6 are viewed</p>
 
             </div>
         </div>
-        <div class="details-containers">
-            <h2 class="experience-sub-title">Data Analytics & Security</h2>
-            <div class="article-container">
-                <article>
-                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-                    <div class="article-content">
-                        <h2>Power Bi</h2>
-                        <p>Basic</p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-                    <div class="article-content">
-                        <h2>Amazon AWS</h2>
-                        <p>Intermediate</p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-                    <div class="article-content">
-                        <h2>Linux System Admin</h2>
-                        <p>Intermediate</p>
-                    </div>
-                </article>
+    </section>
 
-                <article>
-                    <img src="./assets/checkmark.png" alt="experience icon" class="icon">
-                    <div class="article-content">
-                        <h2>Network+Web App Penetration Testing</h2>
-                        <p>Intermediate</p>
-                    </div>
-                </article>
+    <!-- CERTIFICATIONS -->
+    <section id="Certifications">
+        <p class="section__text__p1">Credentials</p>
+        <h1 class="title">Certifications</h1>
+        <div class="cert-grid">
+            <div class="cert-card"><div class="cert-icon">&#128737;</div><h3>Ethical Hacking Certificate</h3></div>
+            <div class="cert-card"><div class="cert-icon">&#128272;</div><h3>Cryptography</h3></div>
+            <div class="cert-card"><div class="cert-icon">&#127758;</div><h3>Introduction to Cybersecurity</h3></div>
+            <div class="cert-card"><div class="cert-icon">&#9881;</div><h3>OPSWAT Critical Infrastructure Protection (ICIP)</h3></div>
+            <div class="cert-card"><div class="cert-icon">&#129302;</div><h3>AI Powered Product Discovery</h3></div>
+            <div class="cert-card"><div class="cert-icon">&#128202;</div><h3>Market Research Analyst Certificate</h3></div>
+        </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="Publications">
+        <p class="section__text__p1">Academic Work</p>
+        <h1 class="title">Publications</h1>
+        <div class="pub-list">
+            <div class="pub-card">
+                <span class="pub-tag">Environmental Research</span>
+                <h3>Echoes of Destruction: An Environmental Battle Royale</h3>
+            </div>
+            <div class="pub-card">
+                <span class="pub-tag">Media Studies</span>
+                <h3>The Impact of Media Bias, False and Altered Information Propaganda Used by International News, Broadcasting Corporations &amp; Governments on National Perceptions and Relations</h3>
+            </div>
+            <div class="pub-card">
+                <span class="pub-tag">Epidemiology / Data</span>
+                <h3>Modeling COVID-19 Spread</h3>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-
-<section id="Projects">
-<p class="section__text__p1"> Browse My Recent</p>
-<h1 class="title"> Projects</h1>
-<div class="experience-details-container">
-    <div class="details-container color container">
-
-        <div class="article-container">
-
-            <img src="./sickle-cell-inheritance-simulation/sickle-Page11.png"
-                 alt="Project 1"
-                 class="project-imgx">
-
+    <!-- CONTACT -->
+    <section id="Contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" alt="Email" class="icon contact-icon email-icon" />
+                <p><a href="mailto:moyolazarous45@gmail.com">moyolazarous45@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/linkedin.png" alt="LinkedIn" class="icon contact-icon" />
+                <p><a href="https://www.linkedin.com/in/lazarousmoyo/">LinkedIn</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/github.png" alt="GitHub" class="icon contact-icon" />
+                <p><a href="https://github.com/Sh0tgvn45off">GitHub</a></p>
+            </div>
         </div>
-        <div class="article-container">
-            <img
-            src="./sickle-cell-inheritance-simulation/sickle-Page1.png"
-            alt="Project 1"
-            class="project-imgx"
-            />
-        </div>
-        <h2 class="experience-sub-title-project-title">Sickle Cell Inheritance Simulation</h2>
-        <div class="btn-container">
-            <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='./sickle-cell-inheritance-simulation/sickle-cell-simulation.html'">
-                Github [Updating]
-            </button>
-            <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='./sickle-cell-inheritance-simulation/sickle-cell-simulation.html'">
-           Give it a try
-        </button>
-        </div>
-</div>
-    <br>
-    <div class="details-container color container">
+    </section>
 
-        <div class="article-container">
+    <!-- FOOTER -->
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Experience">Skills</a></li>
+                    <li><a href="#WorkHistory">Work</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &copy; 2026 Lazarous Moyo. All Rights Reserved.</p>
+    </footer>
 
-            <img src="./HGMC data/1.Preview-HGMC-portfolio .png"
-                 alt="Project 1"
-                 class="project-imgx">
-
-        </div>
-        <div class="article-container">
-            <img
-            src="./HGMC data/3.Preview-HGMC-portfolio .gif"
-            alt="Project 1"
-            class="project-imgx"
-            />
-        </div>
-        <h2 class="experience-sub-title-project-title">Hand Gesture Mouse Control</h2>
-        <div class="btn-container">
-            <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/Sh0tgvn45off/Hand-Gesture-Mouse-Control-System-py'"
-            >
-                Github
-            </button>
-            <button
-            class="btn btn-color-2 project-btn"
-            onclick="showVideoPopup()"
-        >
-            Live Demo
-        </button>
-        </div>
-</div>
-    <br>
-    <div class="details-container color container">
-
-        <div class="article-container">
-
-            <img src="./Capture Note Assistant/1.capturenoteassistant.png"
-                 alt="Project 1"
-                 class="project-imgx">
-
-        </div>
-        <div class="article-container">
-            <img
-            src="./Capture Note Assistant/2.capturenoteassistant.png"
-            alt="Project 1"
-            class="project-imgx"
-            />
-        </div>
-        <h2 class="experience-sub-title-project-title">Capture Note Assistant</h2>
-        <div class="btn-container">
-            <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/Sh0tgvn45off/Hand-Gesture-Mouse-Control-System-py'"
-            >
-                Github
-            </button>
-            <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='./Capture Note Assistant/index.html'"
-        >
-           Working Prototype
-        </button>
+    <!-- VIDEO POPUP -->
+    <div id="video-popup" class="popup">
+        <div class="popup-content">
+            <iframe id="drive-video"
+                src="https://drive.google.com/file/d/1oPNnEOA2uTpLIYdXLrZXpeQohdIGcBQ3/preview"
+                frameborder="0" allowfullscreen></iframe>
+            <button class="close-button btn btn-color-2" onclick="closeVideoPopup()">Close</button>
         </div>
     </div>
-<br>
-<div class="details-container color container">
 
-    <div class="article-container">
-
-        <img src="./NatGeo_screenshots/natgeo_1.png"
-             alt="Project 1"
-             class="project-imgx">
-
-    </div>
-    <div class="article-container">
-        <img
-        src="./NatGeo_screenshots/natgeo_2.png"
-        alt="Project 1"
-        class="project-imgx"
-        />
-    </div>
-    <h2 class="experience-sub-title-project-title">Natgeo ArcGIS Article</h2>
-    <div class="btn-container">
-        <button
-        class="btn btn-color-2 project-btn"
-        onclick="location.href='https://www.linkedin.com/posts/lazarous-moyo_natgeo-impact-extern-activity-7226083246697013248-WTvB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADIfcSsBcd6ZoF92mFUDy2mS-WdXsG4g2tI'"
-        >
-            Review
-        </button>
-        <button
-        class="btn btn-color-2 project-btn"
-        onclick="location.href='https://storymaps.arcgis.com/stories/bb5a88f8afe34440b307cce34a972c38'"
-
-        >
-        Read Article
-        </button>
-    </div>
-</div>
-</section>
-</section>
-<section id="contact">
-  <p class="section__text__p1">Get in Touch</p>
-  <h1 class="title">Contact Me</h1>
-  <div class="contact-info-upper-container">
-    <div class="contact-info-container">
-
-      <img
-        src="./assets/email.png"
-        alt="icon"
-        class="icon contact-icon email-icon"
-      />
-      <p><a href="mailto:moyolazarous45@gmail.com">Email</a></p>
-    </div>
-    <div class="contact-info-container">
-      <img
-        src="./assets/linkedin.png"
-        alt="icon"
-        class="icon contact-icon"
-      />
-      <p><a href="https://www.linkedin.com/in/lazarous-moyo/">LinkedIn</a></p>
-    </div>
-  </div>
-</section>
-<footer>
-  <nav>
-    <div class="nav-links-container"
-            id="Contact">
-      <ul class="nav-links">
-        <li><a href="#About">About</a></li>
-        <li><a href="#Experience">Experience</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#Contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-  <p>Copyright © 2025 Lazarous Moyo. All Rights Reserved.</p>
-</footer>
-<!-- Pop up video-->
-<div id="video-popup" class="popup">
-    <div class="popup-content">
-        <iframe
-            id="drive-video"
-            src="https://drive.google.com/file/d/1oPNnEOA2uTpLIYdXLrZXpeQohdIGcBQ3/preview"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
-        <button class="close-button" onclick="closeVideoPopup()">Close</button>
-    </div>
-</div>
-<script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
-
-
