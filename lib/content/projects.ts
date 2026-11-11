@@ -16,10 +16,37 @@ export interface Project {
   stack: string[];
   visual: ProjectVisual;
   links: { live?: string; post?: string };
+  /** Shown in place of GitHub stats when there's no public repo. */
+  note?: string;
 }
 
 /** Descriptions come from each repo's README and the related LinkedIn posts. */
 export const projects: Project[] = [
+  {
+    // Built and maintained at The Salt Inc.; private codebase.
+    title: "MindLink by The Salt Inc.",
+    kind: "AI product · The Salt Inc.",
+    status: { label: "Live · maintained", tone: "live" },
+    summary:
+      "An AI-powered psychometric insights platform that helps marketing teams understand, target and speak to audiences by personality. I build on it, maintain it and ship its updates as a full-stack developer at The Salt Inc.",
+    highlights: [
+      "AI co-pilot with psychological intelligence, driven by plain-language prompts",
+      "Audience network and analysis: find and decode psychometric profiles, with exports to ad platforms",
+      "MindMatch Score rates how well messaging and ads resonate with each personality type",
+      "A proprietary model of consumer psychology across five dimensions, from ambitions to self-expression",
+    ],
+    stack: ["AI", "Psychometrics", "Audience analytics", "Ad-platform integrations"],
+    visual: {
+      kind: "screenshot",
+      src: "/images/projects/mindlink.jpg",
+      alt: "MindLink home page: AI-powered psychometric insights panel for marketing efficiency",
+      width: 1440,
+      height: 900,
+      url: "saltmindlink.com",
+    },
+    links: { live: "https://saltmindlink.com" },
+    note: "Product at The Salt Inc. · private codebase",
+  },
   {
     // Private repository: no stats or Code link, just the live site.
     title: "Zikomo Mentorship Africa",
@@ -43,6 +70,7 @@ export const projects: Project[] = [
       url: "www.zikomomentorship.com",
     },
     links: { live: "https://www.zikomomentorship.com" },
+    note: "Client project · private repository",
   },
   {
     repo: "ashoka-archives-the-maze",
@@ -128,6 +156,30 @@ export const projects: Project[] = [
       url: "www.ecolightinnovation.com",
     },
     links: { live: "https://www.ecolightinnovation.com" },
+  },
+  {
+    title: "Elite Research Desk",
+    kind: "Web · Client project",
+    status: { label: "Live", tone: "live" },
+    summary:
+      "Website for an academic-support service for university students in Zambia: editing, thesis coaching and data-analysis consulting, with services, pricing and a guided enquiry flow.",
+    highlights: [
+      "Next.js 15, TypeScript, Tailwind CSS and Framer Motion, in a light Apple-style design",
+      "Interactive example document showing editing, coaching and data-analysis support",
+      "Three-step enquiry form with file upload, validated on the server and forwarded to Google Apps Script",
+      "Generated social preview images and structured data for search",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+    visual: {
+      kind: "screenshot",
+      src: "/images/projects/elite-research-desk.jpg",
+      alt: "Elite Research Desk home page: Your work, at its very best",
+      width: 1440,
+      height: 900,
+      url: "www.eliteresearchdesk.com",
+    },
+    links: { live: "https://www.eliteresearchdesk.com" },
+    note: "Client project · private repository",
   },
 ];
 

@@ -119,7 +119,7 @@ function ProjectCard({ project, index, stats }: { project: Project; index: numbe
                   {stats.pushedAt && <span>updated {formatMonth(stats.pushedAt)}</span>}
                 </>
               ) : (
-                <span>Client project · private repository</span>
+                <span>{project.note ?? "Private repository"}</span>
               )}
             </p>
             <div className="flex flex-wrap items-center gap-5">
@@ -141,7 +141,7 @@ export function Projects({ stats, publicRepos }: { stats: (RepoStats | null)[]; 
         <SectionHead
           index="01"
           label="Selected work"
-          title="Things I’ve built, from mentorship platforms to ICU decision support."
+          title="Things I’ve built, from AI products and mentorship platforms to ICU decision support."
           aside={`${projects.length} featured${publicRepos ? ` · ${publicRepos} public repos` : ""}`}
         />
         <RevealGroup className="space-y-6">
