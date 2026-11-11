@@ -18,6 +18,8 @@ export const engineering: Role[] = [
     role: "Full Stack Developer",
     org: "The Salt Inc.",
     meta: "Mumbai, Maharashtra, India",
+    summary:
+      "Building, maintaining and releasing updates to MindLink (saltmindlink.com), an AI-powered psychometric insights platform for marketing teams.",
   },
   {
     dates: "Jul 2026 – Nov 2026",
