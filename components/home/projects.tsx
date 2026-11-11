@@ -8,6 +8,7 @@ import type { RepoStats } from "@/lib/github";
 import { profile } from "@/lib/site";
 import { cn, formatMonth } from "@/lib/utils";
 import { AudioMidiVisual, VentilationVisual } from "./project-visuals";
+import { WindowFrame } from "./window-frame";
 
 const tones: Record<Project["status"]["tone"], string> = {
   live: "border-accent/40 text-accent",
@@ -15,20 +16,28 @@ const tones: Record<Project["status"]["tone"], string> = {
   research: "border-ink-3/40 text-ink-2",
 };
 
+/** The project shown whole inside a window: a browser for websites, an app window for illustrations. */
 function Visual({ project }: { project: Project }) {
   const v = project.visual;
-  if (v.kind === "image") {
-    return (
-      <Image
-        src={v.src}
-        alt={v.alt}
-        fill
-        sizes="(min-width: 1024px) 560px, 100vw"
-        className="object-cover transition-transform duration-700 ease-apple group-hover:scale-[1.03]"
-      />
+  if (v.kind === "screenshot") {
+    const frame = (
+      <WindowFrame address={v.url}>
+        <Image src={v.src} alt={v.alt} width={v.width} height={v.height} sizes="(min-width: 1024px) 500px, 92vw" className="block h-auto w-full" />
+      </WindowFrame>
+    );
+    return project.links.live ? (
+      <a href={project.links.live} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title} (live site)`} className="block rounded-xl">
+        {frame}
+      </a>
+    ) : (
+      frame
     );
   }
-  return v.kind === "audio-midi" ? <AudioMidiVisual /> : <VentilationVisual />;
+  return (
+    <WindowFrame title={v.title}>
+      <div className="aspect-[16/10]">{v.kind === "audio-midi" ? <AudioMidiVisual /> : <VentilationVisual />}</div>
+    </WindowFrame>
+  );
 }
 
 function ExtLink({ href, children }: { href: string; children: React.ReactNode }) {
@@ -50,8 +59,24 @@ function ProjectCard({ project, index, stats }: { project: Project; index: numbe
   return (
     <RevealItem>
       <article className="panel group grid overflow-hidden lg:grid-cols-2">
-        <div className={cn("relative aspect-[16/10] overflow-hidden border-b bg-raised lg:aspect-auto lg:min-h-[420px] lg:border-b-0", flip ? "lg:order-2 lg:border-l" : "lg:border-r")}>
-          <Visual project={project} />
+        <div
+          className={cn(
+            "relative flex items-center justify-center overflow-hidden border-b bg-raised/40 p-4 sm:p-8 lg:border-b-0",
+            flip ? "lg:order-2 lg:border-l" : "lg:border-r",
+          )}
+        >
+          {/* Dotted backdrop, like a design canvas */}
+          <div
+            aria-hidden
+            className="absolute inset-0 opacity-70"
+            style={{
+              backgroundImage: "radial-gradient(rgb(var(--line) / calc(var(--line-alpha) * 1.6)) 1px, transparent 1px)",
+              backgroundSize: "18px 18px",
+            }}
+          />
+          <div className="relative w-full transition-transform duration-500 ease-apple group-hover:-translate-y-1">
+            <Visual project={project} />
+          </div>
         </div>
         <div className="flex flex-col p-6 md:p-9">
           <div className="flex flex-wrap items-center gap-3">

@@ -1,7 +1,9 @@
 export type ProjectVisual =
-  | { kind: "image"; src: string; alt: string }
-  | { kind: "audio-midi" }
-  | { kind: "ventilation" };
+  /** A screenshot shown whole inside a browser window, with the site's address in the bar. */
+  | { kind: "screenshot"; src: string; alt: string; width: number; height: number; url: string }
+  /** An illustration shown inside an app window. */
+  | { kind: "audio-midi"; title: string }
+  | { kind: "ventilation"; title: string };
 
 export interface Project {
   /** GitHub repository name under Sh0tgvn45off. Used to fetch live stats. */
@@ -32,7 +34,14 @@ export const projects: Project[] = [
       "Exhibited live at the VA/MS Exhibition 2026, Ashoka University",
     ],
     stack: ["JavaScript", "HTML5 Canvas", "BFS", "Gamepad API", "Apps Script"],
-    visual: { kind: "image", src: "/images/projects/ashoka-maze.jpg", alt: "Title screen of Ashoka Archives: The Maze" },
+    visual: {
+      kind: "screenshot",
+      src: "/images/projects/ashoka-maze.jpg",
+      alt: "Title screen of Ashoka Archives: The Maze, with the map key, controls and minimap around the maze",
+      width: 1440,
+      height: 900,
+      url: "ashoka-archives-the-maze.vercel.app",
+    },
     links: {
       live: "https://ashoka-archives-the-maze.vercel.app",
       post: "https://www.linkedin.com/posts/lazarous-moyo_gamedev-javascript-html5canvas-ugcPost-7460763433529987073-XMFh/",
@@ -52,7 +61,7 @@ export const projects: Project[] = [
       "Next: move the stable engine into C++/JUCE as a VST3 plugin",
     ],
     stack: ["Python", "pYIN", "MIDI", "DSP", "JUCE (planned)"],
-    visual: { kind: "audio-midi" },
+    visual: { kind: "audio-midi", title: "audio-to-instrument · v0.1 prototype" },
     links: {},
   },
   {
@@ -69,7 +78,7 @@ export const projects: Project[] = [
       "Built on MIMIC-III, with off-policy evaluation and subgroup analysis",
     ],
     stack: ["Python", "XGBoost", "Offline RL (CQL)", "MIMIC-III", "Jupyter"],
-    visual: { kind: "ventilation" },
+    visual: { kind: "ventilation", title: "mp_personalisation_pipeline.ipynb" },
     links: {},
   },
   {
@@ -86,7 +95,14 @@ export const projects: Project[] = [
       "Deployed on Vercel with a custom domain",
     ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
-    visual: { kind: "image", src: "/images/projects/ecolight.jpg", alt: "Home page of the EcoLight Innovations website" },
+    visual: {
+      kind: "screenshot",
+      src: "/images/projects/ecolight.jpg",
+      alt: "Home page of the EcoLight Innovations website: Light, beyond the grid",
+      width: 1440,
+      height: 900,
+      url: "www.ecolightinnovation.com",
+    },
     links: { live: "https://www.ecolightinnovation.com" },
   },
 ];
