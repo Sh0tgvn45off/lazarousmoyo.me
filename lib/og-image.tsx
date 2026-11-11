@@ -9,7 +9,7 @@ export const ogAlt = `${profile.name}, ${profile.role}`;
 
 const TEXT = {
   bold: "LazarousMoyo",
-  regular: "FULL-STACK · DATA · MACHINE LEARNINGFull-stack developer, data analyst and ML engineerlazarousmoyo.vercel.app$ whoamiProjects · Google Developer badges · Writing",
+  regular: "FULL STACK DEVELOPER · THE SALT INC.React · Node.js · Spring Boot · PostgreSQL · AWS · Kotlinlazarousmoyo.vercel.app",
 };
 
 async function googleFont(family: string, text: string): Promise<ArrayBuffer | null> {
@@ -50,14 +50,14 @@ export async function renderOgImage() {
         />
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", flex: 1 }}>
           <div style={{ display: "flex", fontFamily: "GeistMono", fontSize: 20, letterSpacing: 4, color: accent }}>
-            FULL-STACK · DATA · MACHINE LEARNING
+            FULL STACK DEVELOPER · THE SALT INC.
           </div>
           <div style={{ display: "flex", flexDirection: "column", fontFamily: "Geist" }}>
             <div style={{ fontSize: 132, fontWeight: 600, color: "#ECEEF1", letterSpacing: -6, lineHeight: 0.92 }}>Lazarous</div>
             <div style={{ fontSize: 132, fontWeight: 600, color: accent, letterSpacing: -6, lineHeight: 0.92 }}>Moyo</div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 10, fontFamily: "GeistMono" }}>
-            <div style={{ fontSize: 24, color: "#A3AAB5" }}>Projects · Google Developer badges · Writing</div>
+            <div style={{ fontSize: 24, color: "#A3AAB5" }}>React · Node.js · Spring Boot · PostgreSQL · AWS · Kotlin</div>
             <div style={{ fontSize: 22, color: "#6E7682" }}>lazarousmoyo.vercel.app</div>
           </div>
         </div>

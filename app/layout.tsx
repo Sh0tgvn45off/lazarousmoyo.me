@@ -11,14 +11,29 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"], dis
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"], display: "swap" });
 
 const description =
-  "Lazarous Moyo, full-stack developer, data analyst and ML engineer from Zambia. Projects, Google Developer badges, writing and experience.";
+  "Lazarous Moyo, Full Stack Developer at The Salt Inc. (React, Node.js, Spring Boot, PostgreSQL, AWS, Kotlin). Projects, Google Developer badges, writing and experience.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(profile.url),
   title: { default: `${profile.name} · ${profile.role}`, template: `%s · ${profile.name}` },
   description,
   authors: [{ name: profile.name, url: profile.url }],
-  keywords: ["Lazarous Moyo", "full-stack developer", "Next.js", "Python", "machine learning", "data analyst", "Zambia", "Ashoka University"],
+  keywords: [
+    "Lazarous Moyo",
+    "full-stack developer",
+    "The Salt Inc.",
+    "React",
+    "Node.js",
+    "Spring Boot",
+    "PostgreSQL",
+    "AWS",
+    "Kotlin",
+    "Android",
+    "Next.js",
+    "Mumbai",
+    "Zambia",
+    "Ashoka University",
+  ],
   openGraph: { type: "profile", title: profile.name, description, url: profile.url, siteName: profile.name },
   twitter: { card: "summary_large_image", title: profile.name, description },
 };
@@ -34,7 +49,8 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: profile.name,
-  jobTitle: profile.role,
+  jobTitle: "Full Stack Developer",
+  worksFor: { "@type": "Organization", name: "The Salt Inc." },
   url: profile.url,
   email: `mailto:${profile.email}`,
   alumniOf: { "@type": "CollegeOrUniversity", name: "Ashoka University" },

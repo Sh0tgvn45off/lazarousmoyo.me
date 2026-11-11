@@ -2,11 +2,12 @@ export const profile = {
   name: "Lazarous Moyo",
   first: "Lazarous",
   last: "Moyo",
-  role: "Full-stack developer, data analyst and ML engineer",
-  eyebrow: ["Full-stack", "Data", "Machine learning", "Zambian", "Ashoka University CS ’25"],
+  role: "Full Stack Developer at The Salt Inc.",
+  headline: "React, Node.js, Spring Boot · PostgreSQL, AWS, Kotlin + Android SDK",
+  eyebrow: ["Full-stack developer", "The Salt Inc.", "Mumbai, India", "Zambian", "Ashoka University CS ’25"],
   intro:
-    "I build clean, functional, user-focused software: community web platforms, data pipelines, and machine-learning systems for digital health. Curious about problems, precise about solutions.",
-  location: "Zambia · Haryana, India",
+    "Full-stack developer at The Salt Inc. in Mumbai. I build clean, user-focused software, from mentorship platforms and community websites to machine-learning systems for digital health.",
+  location: "Mumbai, India · from Zambia",
   url: "https://lazarousmoyo.vercel.app",
   email: "moyolazarous45@gmail.com",
   links: {
@@ -16,17 +17,11 @@ export const profile = {
   },
 } as const;
 
-/** What the "now" terminal panel shows. Facts only. */
+/** What the "now" terminal panel shows. Facts only, matching LinkedIn. */
 export const now = {
-  roles: [
-    {
-      since: "Mar 2026",
-      title: "Backend Infrastructure & ML Intern",
-      org: "Koita Centre for Digital Health, Ashoka University",
-    },
-  ],
+  roles: [{ since: "Jun 2026", title: "Full Stack Developer", org: "The Salt Inc. · Mumbai" }],
   building: { since: "Sep 2026", title: "audio-to-instrument", note: "v0.1, Python → VST3" },
-  stack: ["TypeScript", "Next.js", "Python", "Node.js", "SQL", "ML"],
+  stack: ["React", "Node.js", "Spring Boot", "PostgreSQL", "AWS", "Kotlin + Android SDK"],
 };
 
 export const nav = [

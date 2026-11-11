@@ -54,7 +54,7 @@ function Terminal() {
             />
             <div>
               <p className="font-sans text-base font-semibold text-ink">{profile.name}</p>
-              <p className="text-ink-3">Full-stack · Data · ML</p>
+              <p className="text-ink-3">Full-stack developer</p>
             </div>
           </div>
         </Line>
