@@ -21,13 +21,15 @@ export function Writing() {
                 rel="noopener noreferrer"
                 className="panel group flex h-full flex-col overflow-hidden transition-colors hover:border-accent/40"
               >
+                {/* The whole image, never cropped, over a soft blurred copy of itself. */}
                 <div className="relative aspect-[16/9] overflow-hidden border-b bg-raised">
+                  <Image src={p.image} alt="" aria-hidden fill sizes="(min-width: 768px) 540px, 100vw" className="scale-110 object-cover opacity-50 blur-2xl" />
                   <Image
                     src={p.image}
                     alt=""
                     fill
                     sizes="(min-width: 768px) 540px, 100vw"
-                    className="object-cover transition-transform duration-700 ease-apple group-hover:scale-[1.03]"
+                    className="object-contain transition-transform duration-700 ease-apple group-hover:scale-[1.02]"
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
