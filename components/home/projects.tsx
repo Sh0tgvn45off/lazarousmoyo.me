@@ -54,7 +54,7 @@ function ExtLink({ href, children }: { href: string; children: React.ReactNode }
   );
 }
 
-function ProjectCard({ project, index, stats }: { project: Project; index: number; stats: RepoStats }) {
+function ProjectCard({ project, index, stats }: { project: Project; index: number; stats: RepoStats | null }) {
   const flip = index % 2 === 1;
   return (
     <RevealItem>
@@ -107,18 +107,24 @@ function ProjectCard({ project, index, stats }: { project: Project; index: numbe
           <div aria-hidden className="min-h-7 flex-1" />
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-dashed pt-5">
             <p className="flex items-center gap-3 font-mono text-[11.5px] text-ink-3 tabular">
-              {stats.stars !== null && (
-                <span className="inline-flex items-center gap-1">
-                  <Star aria-hidden className="size-3.5" />
-                  {stats.stars}
-                </span>
+              {stats ? (
+                <>
+                  {stats.stars !== null && (
+                    <span className="inline-flex items-center gap-1">
+                      <Star aria-hidden className="size-3.5" />
+                      {stats.stars}
+                    </span>
+                  )}
+                  {stats.language && <span>{stats.language}</span>}
+                  {stats.pushedAt && <span>updated {formatMonth(stats.pushedAt)}</span>}
+                </>
+              ) : (
+                <span>Client project · private repository</span>
               )}
-              {stats.language && <span>{stats.language}</span>}
-              {stats.pushedAt && <span>updated {formatMonth(stats.pushedAt)}</span>}
             </p>
             <div className="flex flex-wrap items-center gap-5">
               {project.links.live && <ExtLink href={project.links.live}>Live</ExtLink>}
-              <ExtLink href={stats.url}>Code</ExtLink>
+              {stats && <ExtLink href={stats.url}>Code</ExtLink>}
               {project.links.post && <ExtLink href={project.links.post}>Post</ExtLink>}
             </div>
           </div>
@@ -128,19 +134,19 @@ function ProjectCard({ project, index, stats }: { project: Project; index: numbe
   );
 }
 
-export function Projects({ stats, publicRepos }: { stats: RepoStats[]; publicRepos: number | null }) {
+export function Projects({ stats, publicRepos }: { stats: (RepoStats | null)[]; publicRepos: number | null }) {
   return (
     <section id="work" className="py-24 md:py-32">
       <div className="container">
         <SectionHead
           index="01"
           label="Selected work"
-          title="Things I’ve built, from archive games to ICU decision support."
+          title="Things I’ve built, from mentorship platforms to ICU decision support."
           aside={`${projects.length} featured${publicRepos ? ` · ${publicRepos} public repos` : ""}`}
         />
         <RevealGroup className="space-y-6">
           {projects.map((p, i) => (
-            <ProjectCard key={p.repo} project={p} index={i} stats={stats[i]} />
+            <ProjectCard key={p.title} project={p} index={i} stats={stats[i]} />
           ))}
         </RevealGroup>
 

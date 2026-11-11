@@ -6,8 +6,8 @@ export type ProjectVisual =
   | { kind: "ventilation"; title: string };
 
 export interface Project {
-  /** GitHub repository name under Sh0tgvn45off. Used to fetch live stats. */
-  repo: string;
+  /** Public GitHub repository under Sh0tgvn45off, for live stats and the Code link. Omit for private work. */
+  repo?: string;
   title: string;
   kind: string;
   status: { label: string; tone: "live" | "progress" | "research" };
@@ -20,6 +20,30 @@ export interface Project {
 
 /** Descriptions come from each repo's README and the related LinkedIn posts. */
 export const projects: Project[] = [
+  {
+    // Private repository: no stats or Code link, just the live site.
+    title: "Zikomo Mentorship Africa",
+    kind: "Full-stack platform · Freelance",
+    status: { label: "Live", tone: "live" },
+    summary:
+      "A full-stack platform for a structured, year-long mentorship programme connecting young Africans with mentors: applications, admin review, mentor–mentee matching, session tracking and a blog.",
+    highlights: [
+      "Next.js 16 with Supabase (Postgres, Auth, Storage) and Drizzle ORM",
+      "Role-based admin and portal dashboards with approval-gated login and soft-delete with an audit trail",
+      "Privacy-first contact sharing, with visibility rules enforced at the data layer",
+      "Fixed a live stored-XSS vulnerability; new indexes cut admin dashboard query round-trips by more than half",
+    ],
+    stack: ["Next.js 16", "Supabase", "PostgreSQL", "Drizzle ORM"],
+    visual: {
+      kind: "screenshot",
+      src: "/images/projects/zikomo.jpg",
+      alt: "Home page of Zikomo Mentorship Africa: Every young person deserves a guide",
+      width: 1440,
+      height: 900,
+      url: "www.zikomomentorship.com",
+    },
+    links: { live: "https://www.zikomomentorship.com" },
+  },
   {
     repo: "ashoka-archives-the-maze",
     title: "Ashoka Archives: The Maze",

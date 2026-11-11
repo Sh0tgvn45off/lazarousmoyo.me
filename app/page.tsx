@@ -13,7 +13,10 @@ import { getGitHubProfile, getRepoStats } from "@/lib/github";
 export const revalidate = 86400;
 
 export default async function HomePage() {
-  const [stats, gh] = await Promise.all([Promise.all(projects.map((p) => getRepoStats(p.repo))), getGitHubProfile()]);
+  const [stats, gh] = await Promise.all([
+    Promise.all(projects.map((p) => (p.repo ? getRepoStats(p.repo) : Promise.resolve(null)))),
+    getGitHubProfile(),
+  ]);
 
   return (
     <>
