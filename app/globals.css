@@ -41,6 +41,13 @@
     -webkit-text-size-adjust: 100%;
   }
 
+  /* Desktop renders at 90%, like browser zoom, so the stack strip under the hero shows on the first screen. */
+  @media (min-width: 1024px) {
+    html {
+      zoom: 0.9;
+    }
+  }
+
   body {
     @apply bg-bg font-sans text-ink antialiased;
   }
