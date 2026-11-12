@@ -73,6 +73,30 @@ export const projects: Project[] = [
     note: "Client project · private repository",
   },
   {
+    repo: "sycamoreroyalsinternational",
+    title: "Sycamore Royals International",
+    kind: "Web · NGO",
+    status: { label: "Live · since 2025", tone: "live" },
+    summary:
+      "Website for a Christian community-based organisation in Wera, Uganda, that runs children’s camps, education support and creation-care projects. First launched in 2025, then rebuilt in 2026 as a Next.js app that keeps the original home page and palette.",
+    highlights: [
+      "Apple-style interface: sheets that become draggable bottom sheets on phones, segmented controls and a full-screen photo viewer",
+      "Spotlight-style site search (Ctrl/⌘ K) built from the page content",
+      "Footprint map drawn from Natural Earth data, marking current and planned sites",
+      "Validated application form that forwards to Google Apps Script and Google Sheets",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Google Apps Script", "Vercel"],
+    visual: {
+      kind: "screenshot",
+      src: "/images/projects/sycamore-royals.jpg",
+      alt: "Sycamore Royals International home page: Welcome to Sycamore Royals, beside the sycamore tree",
+      width: 1440,
+      height: 900,
+      url: "sycamoreroyalsinternational.vercel.app",
+    },
+    links: { live: "https://sycamoreroyalsinternational.vercel.app" },
+  },
+  {
     repo: "ashoka-archives-the-maze",
     title: "Ashoka Archives: The Maze",
     kind: "Game · Algorithms",
