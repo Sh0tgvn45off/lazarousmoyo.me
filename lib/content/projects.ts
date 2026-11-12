@@ -97,33 +97,6 @@ export const projects: Project[] = [
     links: { live: "https://sycamoreroyalsinternational.vercel.app" },
   },
   {
-    repo: "ashoka-archives-the-maze",
-    title: "Ashoka Archives: The Maze",
-    kind: "Game · Algorithms",
-    status: { label: "Live · exhibited", tone: "live" },
-    summary:
-      "A procedurally generated maze game that turns the Ashoka University Archives of Contemporary India into a playable story, built for the course Visualising from the Archive.",
-    highlights: [
-      "Multi-path mazes from a recursive backtracker plus braid algorithm",
-      "Guards that chase with BFS pathfinding; fumigation gas that BFS flood-fills the corridors",
-      "25 Curiosity Points unlock real archive facts; global leaderboard on Google Apps Script",
-      "Exhibited live at the VA/MS Exhibition 2026, Ashoka University",
-    ],
-    stack: ["JavaScript", "HTML5 Canvas", "BFS", "Gamepad API", "Apps Script"],
-    visual: {
-      kind: "screenshot",
-      src: "/images/projects/ashoka-maze.jpg",
-      alt: "Title screen of Ashoka Archives: The Maze, with the map key, controls and minimap around the maze",
-      width: 1440,
-      height: 900,
-      url: "ashoka-archives-the-maze.vercel.app",
-    },
-    links: {
-      live: "https://ashoka-archives-the-maze.vercel.app",
-      post: "https://www.linkedin.com/posts/lazarous-moyo_gamedev-javascript-html5canvas-ugcPost-7460763433529987073-XMFh/",
-    },
-  },
-  {
     repo: "audio-to-instrument",
     title: "Audio to Instrument",
     kind: "Audio DSP · Plugin",
@@ -204,6 +177,33 @@ export const projects: Project[] = [
     },
     links: { live: "https://www.eliteresearchdesk.com" },
     note: "Client project · private repository",
+  },
+  {
+    repo: "ashoka-archives-the-maze",
+    title: "Ashoka Archives: The Maze",
+    kind: "Game · Algorithms",
+    status: { label: "Live · exhibited", tone: "live" },
+    summary:
+      "A procedurally generated maze game that turns the Ashoka University Archives of Contemporary India into a playable story, built for the course Visualising from the Archive.",
+    highlights: [
+      "Multi-path mazes from a recursive backtracker plus braid algorithm",
+      "Guards that chase with BFS pathfinding; fumigation gas that BFS flood-fills the corridors",
+      "25 Curiosity Points unlock real archive facts; global leaderboard on Google Apps Script",
+      "Exhibited live at the VA/MS Exhibition 2026, Ashoka University",
+    ],
+    stack: ["JavaScript", "HTML5 Canvas", "BFS", "Gamepad API", "Apps Script"],
+    visual: {
+      kind: "screenshot",
+      src: "/images/projects/ashoka-maze.jpg",
+      alt: "Title screen of Ashoka Archives: The Maze, with the map key, controls and minimap around the maze",
+      width: 1440,
+      height: 900,
+      url: "ashoka-archives-the-maze.vercel.app",
+    },
+    links: {
+      live: "https://ashoka-archives-the-maze.vercel.app",
+      post: "https://www.linkedin.com/posts/lazarous-moyo_gamedev-javascript-html5canvas-ugcPost-7460763433529987073-XMFh/",
+    },
   },
 ];
 
