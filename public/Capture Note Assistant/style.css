@@ -1,0 +1,244 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+}
+
+.site-header {
+    background-color: #08415c;
+    color: white;
+    padding: 15px 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.site-titles {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.site-author {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.site-app-name {
+    font-size: 1em;
+}
+
+.site-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.site-navigation li {
+    margin-left: 20px;
+}
+
+.site-navigation li:first-child {
+    margin-left: 0;
+}
+
+.site-navigation a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.site-navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Session Mode Buttons */
+.session-mode-selection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.mode-button {
+    padding: 10px 25px;
+    margin: 0 10px;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    border: none;
+    font-size: 1em;
+}
+
+.mode-button:hover {
+    background-color: #d0d0d0;
+}
+
+.mode-button.selected {
+    background-color: #083d74;
+    color: white;
+}
+
+/* Action Buttons (END SESSION, FORMAT, DOWNLOAD) - Inherits from mode-button */
+/* .action-button inherits styles from .mode-button */
+
+
+/* Controls and Document Layout */
+.controls-and-document {
+    display: flex;
+    align-items: stretch;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.mic-control {
+    width: 100px;
+    display: flex;
+    flex-direction: column; /* Stack mic and timer vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.start-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-bottom: 10px; /* Space between mic and timer */
+}
+
+.start-button img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+/* Timer Display Styles */
+.timer-display {
+    display: flex;
+    flex-direction: column; /* Stack icon and text */
+    align-items: center;
+}
+
+.timer-icon {
+    height: 30px; /* Adjust size of timer icon */
+    width: auto;
+    margin-bottom: 5px; /* Space between icon and countdown text */
+}
+
+.countdown-text {
+    font-size: 0.9em;
+    color: #555; /* Darker gray for countdown text */
+    font-weight: bold;
+}
+
+
+.document-area {
+    flex-grow: 1;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    min-height: 200px; /* Reduced initial min-height significantly */
+    max-height: 60vh; /* Keep a max-height to limit extreme expansion on very long texts, adjust as needed */
+    overflow-y: auto; /* Keep scrollable when content exceeds max-height */
+    /* Removed aspect-ratio to allow free vertical resizing based on content */
+    resize: vertical; /* Allow user to resize vertically */
+}
+
+.text-area {
+    white-space: pre-wrap;
+    outline: none;
+    font-size: 1em;
+    line-height: 1.6;
+    min-height: calc(100% - 40px); /* Adjust to compensate for padding in document-area */ /*  Consider simpler 100% if padding fully controlled by document-area */
+    height: auto;      /* Let height adjust based on content */
+    display: block;    /* Keep as block display for height behavior */
+    padding: 0;        /* No padding for text-area itself */
+}
+
+
+/* Bottom Controls (Now below doc again) */
+.bottom-controls {
+    margin-top: 20px; /* Space between doc and controls */
+    text-align: center;
+}
+
+.bottom-controls button, .download-options button, .download-options select {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+}
+
+.download-options {
+    margin-top: 10px; /* Space between FORMAT and DOWNLOAD options */
+    text-align: center;
+}
+
+
+/* Smaller buttons styling */
+.smaller-button {
+    transform: scale(0.6);
+    transform-origin: center;
+    margin: 0px;
+    padding: 8px 12px;
+    font-size: 1em;
+}
+
+/* Adjustments for smaller download options section */
+.smaller-download-options {
+    margin-top: 0px;
+}
+
+.timer-icon.timer-running {
+    animation: pulse-opacity 1s infinite alternate; /* Example blinking effect */
+}
+
+@keyframes pulse-opacity {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; } /* Slightly more transparent at end */
+}
+
+.timer-icon.timer-animate { /* Another example class based animation */
+    animation: spin-rotate 2s linear infinite; /* Example rotate effect if icon looks good when spinning */
+}
+
+
+@keyframes spin-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
