@@ -45,7 +45,7 @@ function Terminal() {
           <Prompt cmd="whoami" />
           <div className="mt-3 flex items-center gap-4">
             <Image
-              src="/images/profile.jpg"
+              src="/images/lazarous-moyo.jpg"
               alt={`Portrait of ${profile.name}`}
               width={72}
               height={72}

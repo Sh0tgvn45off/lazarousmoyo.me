@@ -26,7 +26,7 @@ export async function renderOgImage() {
   const [bold, mono, photo] = await Promise.all([
     googleFont("Geist:wght@600", TEXT.bold),
     googleFont("Geist+Mono:wght@400", TEXT.regular),
-    readFile(path.join(process.cwd(), "public/images/profile.jpg")).catch(() => null),
+    readFile(path.join(process.cwd(), "public/images/lazarous-moyo.jpg")).catch(() => null),
   ]);
   const fonts = [
     bold && { name: "Geist", data: bold, weight: 600 as const, style: "normal" as const },
