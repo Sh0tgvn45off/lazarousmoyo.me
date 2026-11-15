@@ -1,0 +1,396 @@
+/* sickle-cell-simulation.css */
+/* style.css */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+}
+
+.site-header {
+    background-color: #08415c;
+    color: white;
+    padding: 15px 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.site-titles {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.site-author {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.site-app-name {
+    font-size: 1em;
+}
+
+.site-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.site-navigation li {
+    margin-left: 20px;
+}
+
+.site-navigation li:first-child {
+    margin-left: 0;
+}
+
+.site-navigation a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.site-navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Session Mode Buttons */
+.mode-button {
+    padding: 10px 25px;
+    margin: 0 10px;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    border: none;
+    font-size: 1em;
+}
+
+.mode-button:hover {
+    background-color: #d0d0d0;
+}
+
+.mode-button.selected {
+    background-color: #083d74;
+    color: white;
+}
+
+
+#SickleCellSimulation-content {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.section-container.container { /* Apply main site container max-width and margins */
+    max-width: 900px; /* From template style.css */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; /* To ensure center alignment within */
+    flex-direction: column;
+    align-items: center;
+}
+
+#project-nav.site-header {
+    background-color: #08415c; /* Main site nav color */
+    color: white;
+    padding: 15px 20px;
+    margin-bottom: 2rem; /* Keep some margin below nav */
+}
+
+.project-nav-container.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* or 900px, match container or wider nav if desired */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.project-site-info.site-branding {
+    display: flex;
+    align-items: center;
+}
+
+.project-logo.site-logo {
+    height: 100px; /* Main site logo size */
+    margin-right: 10px;
+}
+
+.project-info-text.site-titles {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.project-info-title.site-author {
+    font-size: 1.2em; /* Main site title size */
+    font-weight: bold;
+}
+
+.project-info-subtitle.site-app-name {
+    font-size: 1.4em; /* Main site subtitle size */
+    font-weight: bold;
+}
+
+.project-nav-links.site-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.project-nav-links.site-navigation li {
+    margin-left: 20px;
+}
+
+.project-nav-links.site-navigation li:first-child {
+    margin-left: 0;
+}
+
+.project-nav-links.site-navigation a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-nav-links.site-navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover color from main site */
+}
+
+
+.experience-details-container {
+    max-width: 1200px; /* keep same max width */
+    margin: 0 auto;
+}
+
+.details-container.color-2 {
+    background-color: #f8f8f8; /* Lighter bg */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.project-simulation-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 30px; /* added margin at bottom of simulation area */
+}
+
+.simulation-input-area, .simulation-live-area {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+     width: calc(50% - 20px);
+    min-width: 300px;
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    .simulation-input-area, .simulation-live-area {
+        width: 95%;
+    }
+    .details-container.color-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+.families-container {
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex; /* Arrange families horizontally */
+    justify-content: center; /* Center families horizontally */
+    align-items: center; /* Vertically align families if needed */
+}
+.grandparents-all {
+    display: flex; /* Arrange all grandparents horizontally */
+    align-items: center; /* Align items vertically in grandparent line */
+}
+
+
+.family {
+    text-align: center;
+    margin-bottom: 0; /* Removed vertical margin for families */
+    padding: 0 20px; /* Add horizontal padding to family containers for spacing */
+}
+.family:first-child {
+    padding-left: 0; /* Remove left padding for the first family */
+}
+
+.family:last-child {
+    padding-right: 0; /* Remove right padding for the last family */
+}
+.family-separator {
+    border-left: 1px solid #ccc; /* Vertical separator line */
+    height: 80px; /* Adjust height to match grandparent icon area */
+    margin: 0 20px; /* Spacing around the separator */
+    display: inline-block; /* Display as inline-block to align with flex items */
+}
+
+
+.parents-generation, .children-generation {
+    margin-bottom: 2rem;
+    margin-top: 1rem; /* Reduced margin from -20px to 1rem */
+    text-align: center;
+}
+
+
+.grandparents, .parents, .children {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.grandparent, .parent, .child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-placeholder {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+}
+.icon-placeholder img {
+    max-width: 85%; /* Reduced to approx 85% of original size */
+    max-height: 85%;
+    display: block;
+    transform: scale(0.85);
+}
+
+
+.allele-selector.mode-button, #num-children.mode-button, .project-btn.mode-button {
+    padding: 10px 25px; /* Button padding from main site template */
+    margin: 0 10px; /* Button margins */
+    border-radius: 20px; /* Button border radius */
+    background-color: #e0e0e0; /* Default button color */
+    color: #333;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    border: none;
+    font-size: 1em; /* Button font size */
+}
+
+.allele-selector.mode-button:hover, #num-children.mode-button:hover, .project-btn.mode-button:hover {
+    background-color: #d0d0d0; /* Button hover color */
+}
+
+.allele-selector.mode-button.selected, #num-children.mode-button.selected, .project-btn.mode-button.selected {
+    background-color: #083d74; /* Selected button color */
+    color: white;
+}
+
+
+.allele-display {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+.allele-display img {
+    height: 25px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.animated-arrow {
+    display: block;
+    margin: 0.5rem auto; /* Reduced vertical margin for arrows */
+    max-width: 50px;
+    height: auto;
+    /* filter: invert(100%);  Removed invert filter as requested */
+}
+#arrow-grandparents-to-parents, #arrow-parents-to-children {
+    /* Specific arrows styling if needed */
+}
+
+.children-generation #children-container {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.children-generation .children .child {
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.children-select-area, .button-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+#num-children.mode-button {
+    margin-left: 10px; /* Keep some left margin for children number dropdown */
+    text-align: center; /* center text inside dropdown if needed */
+}
+
+#simulation-results {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    text-align: left;
+}
+
+
+.simulation-input-area .button-container, .simulation-live-area .button-container, .project-simulation-area .button-container {
+    text-align: center;
+}
+.project-simulation-area .button-container.restart-button-container{
+    text-align: center;
+}
+
+
+.project-btn.mode-button.simulate, .project-btn.mode-button.restart {
+    margin: 1rem auto;
+    display: block;
+    width: fit-content;
+    min-width: 100px;
+}
