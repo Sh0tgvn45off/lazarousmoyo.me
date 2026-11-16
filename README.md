@@ -23,7 +23,7 @@ npm run dev        # http://localhost:3000
 | --- | --- |
 | Name, intro, links, the "now" terminal | `lib/site.ts` |
 | Featured projects and earlier work | `lib/content/projects.ts` |
-| Google Developer badges | `lib/content/badges.ts` (images in `public/images/badges/`) |
+| Google Developer badges, GitHub achievements | `lib/content/badges.ts` (images in `public/images/badges/`, GitHub ones in `public/images/badges/github/`) |
 | LinkedIn posts | `lib/content/posts.ts` (images in `public/images/posts/`) |
 | Experience, education, skills, tool strip | `lib/content/experience.ts` |
 
