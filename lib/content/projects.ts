@@ -194,8 +194,8 @@ export const projects: Project[] = [
     stack: ["JavaScript", "HTML5 Canvas", "BFS", "Gamepad API", "Apps Script"],
     visual: {
       kind: "screenshot",
-      src: "/images/projects/ashoka-maze-gameplay.jpg",
-      alt: "Ashoka Archives: The Maze mid-run: a guard's flashlight catches the explorer in the bookshelf maze while fumigation gas spreads from the entrance, beside the Curiosity Points, stamina and checkpoint panel",
+      src: "/images/projects/ashoka-maze-poster.jpg",
+      alt: "Poster for Ashoka Archives: The Maze: the gold title beside a chaos-mode scene in which three guards' red flashlight beams close in on the explorer while fumigation gas spreads through the bookshelf maze",
       width: 1440,
       height: 900,
       url: "ashoka-archives-the-maze.vercel.app",
