@@ -21,3 +21,4 @@ npm-debug.log*
 # private documents - never publish
 *.docx
 *.doc
+/cv/
